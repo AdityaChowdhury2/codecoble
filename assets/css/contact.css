@@ -1,0 +1,582 @@
+@font-face {
+  font-family: Croparo;
+  src: url("../font/ProtestStrike-Regular.ttf");
+}
+@font-face {
+  font-family: Orion Sans;
+  src: url("../font/OrionSans-Regular.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh; /* Add enough scrollable space */
+}
+:root {
+  --heading-font: Croparo;
+  --text-font: Orion Sans;
+  --primary-color: #2667ff;
+  --secondary-color: #ffc011;
+  --third-color: #7340ff;
+  --text-size: 14px;
+  --heading-size: 30px;
+}
+
+#main {
+  position: relative;
+  /* overflow: hidden; */
+}
+/* .burger{
+  display: none;
+}
+.nav-links ul li{
+  display: none;
+} */
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+#page nav {
+  padding: 2vw 2vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+#page>nav h1 img{
+    height: 1.5vw;
+}
+#page>nav .part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#page>nav .part2 h4{
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-family: var(--heading-font);
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.875);
+    font-size: 15px;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+#page>nav .part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+#page>nav .part2 h4:hover::after{
+    bottom: 0;
+}
+#page>nav .part2 h4 a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 9;
+}
+#page>nav .part2 h4:hover a{
+    color:black;
+}
+#contact-heading h1{
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  font-family: var(--heading-font);
+  font-weight: 100;
+  font-size: 3vw;
+  letter-spacing: 0.2vw;
+  margin: 3vw 35vw;
+  text-decoration: underline;
+}
+
+#map-container{
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#map-container h2{
+  font-family: var(--heading-font);
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  top: 0;
+}
+
+
+#map-container iframe{
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  transition: all ease 0.3s;
+}
+#map-container iframe:hover{
+  scale: 1.1;
+  
+}
+#contact-info{
+  position: relative;
+  display: flex;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+  border-bottom: 2px solid white;
+}
+#contact-info h1{
+  font-family: var(--heading-font);
+  font-weight: 100;
+  font-size: 1.5vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  color: white;
+}
+#info1{
+  padding: 2vw;
+  /* background-color: red; */
+  height: 10vw;
+  width: 25%;
+}
+#info1 h1,
+#info2 h1{
+  font-size: 1.5vw;
+  letter-spacing: 0.1vw;
+  text-transform: capitalize;
+}
+
+#info1 h2 a,
+#info2 h2 a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ line-height: 3vw;
+ text-decoration: none;
+ font-family: var(--text-font);
+ color: rgb(146, 144, 144);
+ transition: all ease 0.3s;
+}
+#info1 h2 a:hover,
+#info2 h2 a:hover{
+  letter-spacing: 0.2vw;
+  color: white;
+  text-decoration: underline;
+}
+
+#info2{
+  padding: 2vw;
+  height: 10vw;
+  width: 25%;
+  /* background-color: rgb(0, 255, 34);
+  . */
+}
+
+
+#page2{
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+#form-container h1{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--heading-font);
+  font-weight: normal;
+  font-size: 3vw;
+}
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#contact-form label{
+  color: white;
+  font-family: var(--text-font);
+  font-size: 1.5vw;
+}
+#contact-form input{
+  height: 2.5vw;
+  width: 30vw;
+  border-radius: 10px;
+  padding: 1vw;
+  font-family: monospace;
+  font-size: 1vw;
+  background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
+  border: 2px solid white;
+  color: white;
+}
+
+#contact-form textarea{
+  height: 6vw;
+  width: 30vw;
+  border-radius: 10px;
+  padding: 1vw;
+  font-family: monospace;
+  font-size: 1vw;
+  background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
+  border: 2px solid white;
+  color: white;
+}
+#contact-form button{
+  padding: 0.5vw 2vw;
+  font-family: var(--heading-font);
+  border-radius: 30px;
+  font-size: 1.3vw;
+  border: none;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+  background: radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%);
+  color: white;
+  border: 1px solid white;
+}
+
+
+
+
+/*loader css*/
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;;
+  gap: 10px;
+}
+#loader h3 {
+  
+  font-family: var(--heading-font);
+  font-size: 2vw;
+  font-weight: 900;
+  
+}
+
+#footer{
+  display: flex;
+  justify-content:center;
+  gap: 2vw;
+  align-items: center;
+  padding: 2vw;
+}
+#footer img{
+  height: 1vw;
+}
+
+#footer h5{
+  color: white;
+  font-family: var(--text-font);
+  font-weight: 100;
+}
+#footer h5 a{
+  text-decoration: none;
+  color: white;
+  font-family: var(--text-font);
+  font-weight: 100;
+}
+
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  #page>nav h1 img {
+    height: 3vw;
+  }
+  
+  #page>nav .part2 h4 {
+    font-size: 12px;
+    padding: 8px 16px;
+    display: none;
+  }
+  
+  #contact-heading h1 {
+    font-size: 5vw;
+    margin: 5vw 10vw;
+  }
+  
+  /* Map container responsive fix */
+  #map-container {
+    height: 30vh; /* Adjusted height for tablets */
+    flex-direction: column;
+  }
+
+  #map-container iframe {
+    width: 80vw;
+    height: 25vh; /* Adjusting map height */
+  }
+
+  /* Adjusting #info1 and #info2 for a column layout on mobile */
+  #contact-info {
+    flex-direction: column; /* Stack the contact info items */
+    gap: 10vw;
+    margin-top: 20vw;
+  }
+
+  #info1, #info2 {
+    width: 80%; /* Adjusting width to fit mobile screen */
+    padding: 2vw;
+    height: auto; /* Adjust height to auto for better responsiveness */
+  }
+  #contact-info h1 {
+    font-size: 4vw;
+    line-height: 10vw;
+  }
+  
+  #form-container h1 {
+    font-size: 5vw;
+  }
+
+  #contact-form label {
+    font-size: 3vw;
+  }
+
+  #contact-form input {
+    width: 80vw;
+    height: 8vw;
+    font-size: 3vw;
+  }
+   #contact-form textarea{
+    width: 80vw;
+      height: 5vw;
+      font-size: 3vw;
+   }
+  #contact-form button {
+    font-size: 3vw;
+    padding: 2vw 3vw;
+  }
+
+  #loader h3 {
+    font-size: 5vw;
+  }
+
+  #footer img {
+    margin-top: 30vw;
+    height: 3.5vw;
+  }
+  #footer{
+    gap: 30px;
+  }
+  #footer-2{
+    margin-top: 30vw;
+  }
+  #footer h5 {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #page>nav h1 img {
+    height: 8vw;
+  }
+  
+  #page>nav .part2 h4 {
+    font-size: 10px;
+    padding: 6px 12px;
+    display: none;
+  }
+  
+  #contact-heading h1 {
+    font-size: 6vw;
+    margin: 5vw 10vw;
+  }
+  
+  /* Map container responsive fix */
+  #map-container {
+    height: 25vh; /* Adjusted height for smaller screens */
+    flex-direction: column;
+  }
+
+  #map-container iframe {
+    width: 90vw;
+    height: 20vh; /* Adjusting map height for mobile */
+  }
+
+  /* Adjusting #info1 and #info2 for a column layout on mobile */
+  #contact-info {
+    flex-direction: column;
+    /* gap: 2vw; */
+    bottom:0;
+  }
+
+  #info1, #info2 {
+    width: 90%; /* Adjusting width to fit mobile screen */
+    padding: 2vw;
+    height: auto;
+  }
+
+  #contact-info h1 {
+    font-size: 5vw;
+  }
+
+  #form-container h1 {
+    font-size: 6vw;
+  }
+
+  #contact-form label {
+    font-size: 3.5vw;
+  }
+
+  #contact-form input {
+    width: 90vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  #contact-form textarea{
+    width: 90vw;
+    height: 20vw;
+  }
+
+  #contact-form button {
+    font-size: 4vw;
+    
+  }
+
+  #loader h3 {
+    font-size: 7vw;
+  }
+
+  #footer img {
+    height: 4vw;
+  }
+  
+  #footer h5 {
+    font-size: 4vw;
+  }
+}
+
+
+
+@media (max-width: 600px)  {
+  
+  /* Burger Icon Styles */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+#page nav h1 img{
+  height: 2vh;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links Default Styles */
+#navLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw;
+}
+
+#navLinks ul {
+  display: flex;
+  gap: 2vw;
+}
+#contact-form textarea{
+    width: 80vw;
+    height: 20vw;
+  }
+}
+
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    right: 5vw;
+    position: absolute;
+  }
+
+  #navLinks {
+    display: none;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    width: 50%;
+    flex-direction: column;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.856),rgb(0, 0, 0)); */
+    background: radial-gradient(circle at -2.9% 90.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    padding: 2vw;
+    z-index: 10;
+    border-radius: 20px 0 0 20px;
+  }
+
+  #navLinks.active {
+    display: flex;
+  }
+
+  #navLinks ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #navLinks ul h1 a {
+    font-size: 3vw;
+    font-family: var(--text-font);
+    padding: 2vw 0;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(139, 136, 136);
+    text-decoration: none;
+    display: block;
+    transition: all ease 0.3s;
+  }
+  #navLinks ul h1 a:hover{
+    letter-spacing: 0.2vw;
+    /* text-decoration: underline; */
+    color: white;
+  }
+}
+
+
+
+.burger.open .line1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+  
+}
+
+.burger.open .line2 {
+  opacity: 0;
+}
+
+.burger.open .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
