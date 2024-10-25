@@ -701,10 +701,13 @@ body {
 	background-color: #000;
 	flex-direction: column;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 2rem;
 }
+
 #page19 > h5 {
+	margin-top: 1rem;
 	width: 35%;
+	font-weight: 500;
 }
 #page20 {
 	position: relative;
@@ -905,6 +908,19 @@ body {
 		font-size: 1.1rem;
 	}
 
+	#page19 {
+		height: auto;
+	}
+
+	#page19 > h1 {
+		width: 80%;
+		font-size: 2.8rem;
+	}
+
+	#page19 > h5 {
+		width: 50%;
+	}
+
 	#center-page20 {
 		width: 40%;
 	}
@@ -1032,8 +1048,13 @@ body {
 		max-height: 70vw;
 	}
 
+	#page19 > h1 {
+		font-size: 2.5rem;
+	}
+
 	#page19 > h5 {
-		font-size: 3vw;
+		width: 50%;
+		font-size: 1.2rem;
 	}
 
 	#page20 > video,
@@ -1145,8 +1166,12 @@ body {
 		max-height: 100vw;
 	}
 
+	#page19 > h1 {
+		font-size: 2.5rem;
+	}
 	#page19 > h5 {
-		font-size: 4vw;
+		width: 80%;
+		font-size: 1.2rem;
 	}
 
 	#page20 > video,
